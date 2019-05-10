@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 6</title>
+</head>
+<body>
+	<h2>Calculator prototype</h2>
+</body>
+
+<script type="text/javascript">
+
+	class Calculator{
+		constructor(num){
+			this.cur_num=num
+		}
+	}
+	Calculator.prototype.add=function(num){
+		this.cur_num=this.cur_num+num
+		return this
+	}
+	Calculator.prototype.subtract=function(num){
+		this.cur_num=this.cur_num-num
+		return this
+	}
+	Calculator.prototype.getAnswer=function(){
+		return this.cur_num;
+	}
+
+
+console.log(new Calculator(2).add(2).add(2).subtract(3).getAnswer());
+</script>
+
+</html>

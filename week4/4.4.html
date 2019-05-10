@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 4</title>
+</head>
+<body>
+<h2>Password validation</h2>
+</body>
+
+<script type="text/javascript">
+
+var validate = (function(){
+	var Password = 'qwerty123';
+
+	var Mothersname = 'swathi';
+
+	return function(){
+
+		var temp = prompt('Enter Password');
+		if(temp == Password)
+			return 'Successfully logged in';
+		else
+		{
+			var name = prompt('Security question : Enter your mothers name');
+			if(name == Mothersname)
+				return 'Successfully logged in';
+			else
+				return 'Wrong credentials';
+
+		}
+	}
+})();
+
+validate();
+
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>mixup</title>
+	<script type="text/javascript">
+		function mixup(a,b)
+		{
+			var a2=a;
+			var b2 = b;
+			var a1 = a.slice(0,2);
+			var b1= b.slice(0,2);
+
+			a=a1+b2.slice(2);
+			b=b1+a2.slice(2)
+			
+			return b+' '+a;
+		}
+	</script>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var first = prompt("Enter first string",'0');
+		var sec = prompt("Enter second string",'0');
+		var res = mixup(first,sec);
+		document.writeln("<h1>"+res+"</h1>");
+	</script>
+
+</body>
+</html>

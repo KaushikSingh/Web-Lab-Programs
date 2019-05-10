@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+
+
+	<div style="padding-left:450px;padding-top:150px;" id='form' >
+
+		<form >
+
+			Name <input type='text' name='name' id='name'>
+			<br><br>
+
+			age <input type='text' name='age' id='age'>
+			<br><br>
+
+			Hometown <input type='text' name='home'  id = 'home'> 
+			<br><br>
+
+			<input type='button' value='submit' onClick='getInfo()'>
+
+			<br><br>
+			<input type='reset' value='clear'>
+
+
+		</form>
+	</div>
+
+
+</body>
+
+<script type='text/javascript'>
+
+	function getInfo()
+	{
+		var home = document.getElementById('home').value;
+		var age = document.getElementById('age').value;
+		var name = document.getElementById('name').value;
+
+		var year = 2019 - parseInt(age)
+
+
+		var node = document.createElement("h4");
+		var textnode = document.createTextNode('User name : '+name);
+		node.appendChild(textnode);
+		document.getElementById("form").appendChild(node);
+
+		var date_txt = age +' dob : ' + year; 
+		var node = document.createElement("h4");
+		var textnode = document.createTextNode(date_txt);
+		node.appendChild(textnode);
+		document.getElementById("form").appendChild(node);
+
+		link = 'https://www.google.com/search?q='+home;
+		var node = document.createElement("a");
+		var textnode = document.createTextNode(home);
+		node.appendChild(textnode);
+		node.setAttribute('href', link);
+		document.getElementById("form").appendChild(node);
+
+		var node = document.createElement("br");
+		document.getElementById("form").appendChild(node);
+		var node = document.createElement("br");
+		document.getElementById("form").appendChild(node);
+
+		link2 = 'https://maps.google.com/?q=' + home;
+		var node = document.createElement("a");
+		var textnode = document.createTextNode('link to your hometown');
+		node.appendChild(textnode);
+		node.setAttribute('href', link2);
+		document.getElementById("form").appendChild(node);
+
+
+
+
+	}
+</script>
+
+</html>

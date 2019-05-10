@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>christmas</title>
+	<script type="text/javascript">
+		function translate(a)
+		{
+			var obj = {"merry":"god","christmas":"jul","and":"och","happy":"gott","new":"nytt","year":"ar"};
+			words = a.split(" ");
+			for(var i=0;i<words.length;i++)
+			{
+				for(j in obj)
+				{
+					if(words[i]==j)
+						words[i]=obj[j];
+				}
+			}
+			var str="";
+
+
+
+			for(var k=0;k<words.length;k++)
+			{
+				str=str+' '+words[k];
+
+			}
+			return str;
+
+		}
+	</script>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var a = prompt("Ente a string",'0');
+
+		var res = translate(a);
+		document.writeln("<h1>"+res+"</h1>");
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+
+
+	<div style="padding-left:450px;padding-top:150px;" id='form' >
+
+		<form >
+
+			Name <input type='text' name='name' id='name'>
+			<br><br>
+
+			age <input type='text' name='age' id='age'>
+			<br><br>
+
+			Hometown <input type='text' name='home'  id = 'home'> 
+			<br><br>
+
+			<input type='button' value='submit' onClick='getInfo()'>
+
+			<br><br>
+			<input type='reset' value='clear'>
+
+
+			<h4 id='1'></h4>
+			<h4 id='2'></h4>
+			<a id='3'> </a>
+			<br><br>
+			<a id='4'> </a>
+
+
+
+		</form>
+	</div>
+
+
+</body>
+
+<script type='text/javascript'>
+
+	function getInfo()
+	{
+		var home = document.getElementById('home').value;
+		var age = document.getElementById('age').value;
+		var name = document.getElementById('name').value;
+
+		var year = 2019 - parseInt(age)
+
+
+		document.getElementById("1").innerHTML = 'User name : '+name;
+
+
+		var date_txt = age +' dob : ' + year; 
+		document.getElementById("2").innerHTML = date_txt;
+
+
+		link = 'https://www.google.com/search?q='+home;
+		document.getElementById("3").href = link;
+		document.getElementById("3").innerHTML = home;
+
+
+		link2 = 'https://maps.google.com/?q=' + home;
+		document.getElementById("4").href = link2;
+		document.getElementById("4").innerHTML = 'Link to your hometown';
+
+
+
+
+	}
+</script>
+
+</html>

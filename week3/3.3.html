@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+
+
+	<div style="padding-left:450px;padding-top:150px;">
+
+		<form >
+
+			Name <input type='text' name='name' id='name'>
+			<br><br>
+
+			username <input type='text' name='user' id='user'>
+			<br><br>
+
+			Password <input type='password' name='pass1'  id = 'p1'> 
+			<br><br>
+
+			Confirm <input type='password' name='pass2' id = 'p2'>
+			<br><br>
+
+
+			year of birth <input type='text' name='date' id ='date'>
+			<br><br>
+
+			Email <input type='text' name='email' placeholder='name@domain.com' id='email'>
+			<br><br>
+
+			<input type='checkbox' id='check' > I agree to all terms and conditions
+			<br><br>
+
+			<input type='submit' value='submit' onClick='validate()'>
+
+			<br><br>
+			<input type='reset' value='clear'>
+
+
+
+		</form>
+	</div>
+
+
+</body>
+
+<script type='text/javascript'>
+
+	function validateEmail(email) 
+	{
+		var re = /\S+@\S+\.\S+/;
+		return re.test(email);
+	}
+
+	function validate()
+	{
+
+		var pass1 = document.getElementById('p1').value;
+		var pass2 = document.getElementById('p2').value;
+		var name = document.getElementById('name').value;
+		var user = document.getElementById('user').value;
+		var date = document.getElementById('date').value;
+		var email = document.getElementById('email').value;
+		var d = parseInt(date.substring(6));
+
+
+		if(pass1 == '' || pass2 == '' || name == '' || user == '' || email == '' || date == '')
+			alert('All fields must be filled');
+
+		else if(pass1 != pass2)
+			alert('Password and confirm password must be same');
+
+		else if(validateEmail(email) == false)
+			alert('Email is not valid');
+
+		else if( d < 1900 || d > 2000)
+			alert('Date is not valid range 1900-2000');
+
+		else if(!document.getElementById("check").checked)
+			alert('Agree to terms and conditions');
+
+		else 
+			alert('Successfully Submitted');
+
+	}
+
+</script>
+
+</html>

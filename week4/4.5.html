@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 4</title>
+</head>
+<body>
+	<h2>Asynchronous code</h2>
+</body>
+
+<script type="text/javascript">
+
+	var rankings = ['alice','bob','eve'];
+
+	for(var i=0, len=rankings.length ;i<len;i++)
+	{
+		(function(i){
+			setTimeout(function(){
+				console.log(i,rankings[i]);
+			},i*1000);
+		})(i);
+	}
+
+</script>
+
+</html>

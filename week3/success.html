@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>ISC</title>
+</head>
+<body>
+	<script typr="text/javascript">
+		var flag=0;
+		var pass1= document.getElementsByName("pass1");
+		var pass2= document.getElementsByName("pass2");
+		if(pass1==pass2)
+			flag=1;
+		if(flag==1)
+			document.writeln("<h1>successfully registered</h1>");
+		else
+			document.writeln("<h1>unable to register</h1>");
+	</script>
+
+</body>
+</html>

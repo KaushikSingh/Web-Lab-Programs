@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>verbing</title>
+	<script type="text/javascript">
+	function verbing(a)
+	{
+		if(a.length<3)
+			return a;
+		else
+			if(a.endsWith('ing'))
+				return a+'ly';
+		else
+			return a+'ing';
+
+}
+</script>
+</head>
+<body>
+
+<script type="text/javascript">
+var a = prompt("Enter first string",'0');
+var res = verbing(a);
+document.writeln("<h1>"+res+"</h1>");
+</script>
+
+</body>
+</html>
