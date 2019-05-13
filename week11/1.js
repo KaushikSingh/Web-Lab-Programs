@@ -32,7 +32,7 @@ app.get("/showData",function(req,res){
 app.post("/addData",function(req,res){
   var data=req.body;
   console.log(data);
-  mongoClient.connect("mongodb://127.0.0.1/sidharth",function(err,db){
+  mongoClient.connect("mongodb://127.0.0.1/mydb",function(err,db){
     if(err){
       console.log(err)
       db.close()
