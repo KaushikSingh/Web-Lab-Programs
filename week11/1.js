@@ -10,7 +10,7 @@ app.get("/",function(req,res){
   res.sendFile(__dirname+'/index.html');
 })
 app.get("/showData",function(req,res){
-  mongoClient.connect("mongodb://127.0.0.1/sidharth",function(err,db){
+  mongoClient.connect("mongodb://127.0.0.1/mydb",function(err,db){
     if(err){
       console.log(err)
       db.close()
